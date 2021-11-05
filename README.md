@@ -21,10 +21,13 @@ _A website that will allow users to order a basic plant-based pizza and add topp
 
 ## Test
 
-  * _Describe: ()
-    Test: It will return a random whole number between 1 - 6
-    Code: diceRoll()
-    Expected Output: 1 or 2 or 3 or 4 or 5 or 6
+  * _Describe: Pizza ()
+    Test: It will create a Pizza constructor with properties for size and toppings
+    Code: function Pizza(size, toppings){
+          this.size = size;
+          this.toppings = toppings;
+          }
+    Expected Output: Pizza{"medium",["spinach","pineapple"]}
 
   * _Describe: Player()
     Test: It will create Player {}
@@ -35,7 +38,7 @@ _A website that will allow users to order a basic plant-based pizza and add topp
     Code: player.roll(5)
     Expected Output: {turnTotal: 5, scoreTotal: 0}
 
-    Test: It will take turnTotal and add it to scoreTotal and put turnTotal to 0
+    Test: It will take turnTotal and it to scoreTotal and put turnTotal to 0
     Code: player.hold()
     Expected Output: {turnTotal:0, scoreTotal: 5}
 
