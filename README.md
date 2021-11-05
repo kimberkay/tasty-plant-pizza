@@ -29,6 +29,16 @@ _A website that will allow users to order a basic plant-based pizza and add topp
           }
     Expected Output: Pizza{"medium",["spinach","pineapple"]}
 
+    Describe: Pizza.prototype.cost ()
+    Test: It will create a Pizza.prototype for the size of pizza
+    Code: Pizza.prototype.cost = function() {
+          let price = 22
+          if (this.size === "large" {
+            price =+ 5    
+          } 
+          return price;
+    }
+
   * _Describe: Player()
     Test: It will create Player {}
     Code: Player()
