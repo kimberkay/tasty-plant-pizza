@@ -34,7 +34,7 @@ _A website that will allow users to order a basic plant-based pizza and add topp
     Code: Pizza.prototype.cost = function() {
           let price = 22;
           let extraToppings = 0;
-          
+
           if (this.size === "large" {
             price =+ 5    
           } 
@@ -85,4 +85,5 @@ _Note: when using the commands listed above, do not include the quotation marks.
 
 _MIT License: https://opensource.org/licenses/MIT_
 
-Copyright (c) _2021_ _Christy Welch, Katie Pundt, and Kim Brannian_
+Copyright (c) _2021_ _Christy Welch, Katie Pundt, and Kim 
+_

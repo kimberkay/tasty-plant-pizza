@@ -5,18 +5,17 @@ let testPizza = new Pizza("medium",["pineapple, spinach"]);
 function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings;
-  this.cost = 22;
+  this.price = 22;
 }
 
 
-Pizza.prototype.cost = function() {
-  if (this.size === "large") {
-    price += 5;
-  } else {  
+Pizza.prototype.finalPrice = function() {
+  if (this.size === "medium") {
+    this.price += 0;
+  } else if (this.size === "large") {
+    this.price =+ 5;
   }
-
-pizzaTotalCost = price + extraToppings;
-return pizzaTotalCost;
+  return this.price;
 };
 
 
