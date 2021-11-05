@@ -26,64 +26,44 @@ _A website that will allow users to order a basic plant-based pizza and add topp
     Code: function Pizza(size, toppings){
           this.size = size;
           this.toppings = toppings;
+          this.price = 22;
           }
-    Expected Output: Pizza{"medium",["spinach","pineapple"]}
+    Expected Output: testPizza {size: 'medium', toppings: Array(1), price: 22}
 
     Describe: Pizza.prototype.cost ()
-    Test: It will create a Pizza.prototype for the cost of pizza.
-    Code: Pizza.prototype.cost = function() {
-          let price = 22;
-          let extraToppings = 0;
+    Test: It will create a Pizza.prototype for the cost of pizza when size is selected
+    Code: Pizza.prototype.finalPrice = function() {
+            if (this.size === "medium") {
+            this.price += 0;
+          } else if (this.size === "large") {
+            this.price += 5;
+            }
+    Expected Output: testPizza2 {size: 'large', toppings: Array(1), price: 27}
 
-          if (this.size === "large" {
-            price =+ 5    
-          } 
-          return price;
-    }
+    Describe: Pizza.prototype.cost ()
+    Test: It will use the Pizza.prototype to add to the cost of pizza based on toppings choice.
+    Code: 
+          
 
-  * _Describe: Player()
-    Test: It will create Player {}
-    Code: Player()
-    Expected Output: {turnTotal: 0, scoreTotal: 0}
-
-    Test: It will use diceRoll() roll and add it to turnTotal
-    Code: player.roll(5)
-    Expected Output: {turnTotal: 5, scoreTotal: 0}
-
-    Test: It will take turnTotal and it to scoreTotal and put turnTotal to 0
-    Code: player.hold()
-    Expected Output: {turnTotal:0, scoreTotal: 5}
-
-    Test: It will make turnTotal to 0 if it receives 1
-    Code: player.roll(1)
-    Expected Output: {turnTotal: 0, scoreTotal: 5}    
-
-  * _Describe: winCheck(playerOne, PlayerTwo)
-  g 
-    Test: It will determine whether either player has turnTotal + scoreTotal: >= 100
-    Code: winCheck(playerOne, playerTwo)
-    Expected Output: playerOne, playerTwo, or false
 
 ## Setup/Installation Requirements
 
-* _Navigate to https://github.com/Christinamawel/Pig-Dice_
+* _Navigate to https://github.com/kimberkay/tasty.plant.pizza_
 * _Click on the green "Code" button and copy the repository URL or click on the copy button_
 * _Open the terminal on your desktop_
 * _Once in the terminal, use it to navigate to your desktop folder_
-* _Once inside your desktop folder, use the command "git clone https://github.com/Christinamawel/Pig-Dice.git"_
-* _After cloning the project, navigate into it using the command "cd Pig-Dice"_
-* _Use the command "git remote" to confirm the creation of the new local repository_
+* _Once inside your desktop folder, use the command "git clone https://github.com/kimberkay/tasty-plant-pizza.com"_
 * _Open the project with the code editor of your choice_
 
-_Note: when using the commands listed above, do not include the quotation marks. They are used here for readability._
+
 
 ## Known Bugs
 
-* _No known bugs_
+* _Too many bugs_
 
 ## License
 
 _MIT License: https://opensource.org/licenses/MIT_
 
-Copyright (c) _2021_ _Christy Welch, Katie Pundt, and Kim 
+Copyright (c) _2021_  Kim Brannian 
 _

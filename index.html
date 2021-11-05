@@ -16,11 +16,28 @@
     </div>
     <div id="pizza-order">
       <form id="pizza-order">
-      <p>Build Your Own Pizza</p>
-      <p>From crust to last topping, our pizzas are entirely plant based. We use our own special mix of various vegan cheeses to get it looking and tasting <em>just right</em>!</em>
-        <p>Build Your Own Plant Based Pizza</p>
-        <p>Add Toppings ($1 per topping)</p>
-      <div>
+        <br> 
+          <p>From perfect crust to scrumptious last topping, our pizzas are entirely plant based. We use our own special mix of various vegan cheeses to get it looking and tasting <em>just right</em>!</em>
+          <p><b>Build Your Own Plant Based Pizza</b></p>
+    <div>
+      <p><b>Pick a size:</b></p>
+        <div class="pizza-size">
+          <label>
+            <input type="radio" name="choose-size" value="medium" checked>
+            Medium
+          </label>
+        </div>
+        <div class="choose-size">
+          <label>
+            <input type="radio" name="choose-size" value="large">
+            Large
+          </label>
+        </div> 
+        <br>
+        <br>
+      <div id="checkboxToppings">
+        <p><b>Add Toppings ($1 per topping)</b></p>
+      <div class="add-toppings">
         <input type="checkbox" id="choose-toppings" value="pineapple">
         <label for="pineapple">Pineapple</label>
       </div>
@@ -43,8 +60,7 @@
 
       <div>
         <button class = "btn btn-dark" type="submit">Add Toppings</button>
-      </div>  
-                 
+      </div>              
     </form>
         
 
