@@ -1,8 +1,8 @@
-# _Pig Dice_
+# _Tasty Plant Pizza Co._
 
-#### By _**Christy Welch, Katie Pundt, and Kim Brannian**_
+#### By _**Kim Brannian**_
 
-#### _A simple two-player dice game._
+#### _A website for the Tasty Plant Pizza Co.._
 
 ## Technologies Used
 
@@ -16,17 +16,12 @@
 
 ## Description
 
-_A simple two-player dice game. Players take turns to roll a single dice as many times as they wish, adding all roll results to a running total, but losing their gained score for the turn if they roll a 1._
+_A website that will allow users to order a basic plant-based pizza and add toppings of their choice._
 
-## Rules of the Game
-_Each player rolls a die until they either roll a 1 or decide to "hold". The first player to score at least 100 points wins._
-* _If the player rolls a 1, they score nothing and it becomes the next player's turn._
-* _If the player rolls any other number, it is added to their turn total and the player's turn continues._
-* _If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn._
 
 ## Test
 
-  * _Describe: diceRoll()
+  * _Describe: ()
     Test: It will return a random whole number between 1 - 6
     Code: diceRoll()
     Expected Output: 1 or 2 or 3 or 4 or 5 or 6
@@ -48,7 +43,8 @@ _Each player rolls a die until they either roll a 1 or decide to "hold". The fir
     Code: player.roll(1)
     Expected Output: {turnTotal: 0, scoreTotal: 5}    
 
-  * _Describe: winCheck(playerOne, PlayerTwo) 
+  * _Describe: winCheck(playerOne, PlayerTwo)
+  g 
     Test: It will determine whether either player has turnTotal + scoreTotal: >= 100
     Code: winCheck(playerOne, playerTwo)
     Expected Output: playerOne, playerTwo, or false
