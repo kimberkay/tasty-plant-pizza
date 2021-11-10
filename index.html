@@ -7,17 +7,17 @@
   <script src="js/scripts.js"></script>
   <title>tasty-plant-pizza</title>
 </head>
-<body>
+<body class="body">
   <div class="container">
     <div id="page-header">
       <h1>Tasty Plant Pizza Co.</h1>
       <h3><em>The tastiest vegan pizza in town</em></h3>
-      <img id="pizza-pic" src="img/pizza.jpg" alt="picture of a delicious plant based pizza">
+      <img id="pizza-pic" src="images/pizza.jpg" alt="picture of a delicious plant based pizza">
     </div>
-    <div id="pizza-order">
+    <div>
       <form id="pizza-order">
         <br> 
-          <p>From perfect crust to scrumptious last topping, our pizzas are entirely plant based. We use our own special mix of various vegan cheeses to get it looking and tasting <em>just right</em>!</em>
+          <p>From perfect crust to the scrumptious last topping, our pizzas are entirely plant based. We use our own special mix of various vegan cheeses to get it looking and tasting <em>just right</em>!</em>
           <p><b>Build Your Own Plant Based Pizza</b></p>
     <div>
       <p><b>Pick a size:</b></p>
@@ -34,37 +34,67 @@
           </label>
         </div> 
         <br>
+        <p><b>Add up to 3 toppings ($5):</b></p>
+        <div class="pizza-toppings">
+          <label>
+            <input type="radio" name="toppings" value="yes" checked>
+            Yes Please!
+          </label>
+        </div>
+        <div class="pizza-toppings">
+          <label>
+            <input type="radio" name="toppings" value="no-thanks">
+            No Thanks, just cheese for me!
+          </label>
+        </div> 
+        <div id="list-toppings">
+          <br>
+          <p><b>Make your choice from these options:</b></p>
+            <ul>
+              <li>Olives</li>
+              <li>Pineapple</li>
+              <li>Spinach</li>
+              <li>Mushrooms</li>
+              <li>Peppers</li>
+              <li>Vegan Pepperoni</li>
+            </ul>
+        </div>
+        <div id="toppings-input">
+          <label for="topping1">Choose One Topping:</label>
+          <input type="text" id="firstChoice">
+          <label for="topping2">Choose Another One:</label>
+          <input type="text" id="secondChoice">
+          <label for="topping3">Choose A Third:</label>
+          <input type="text" id="thirdChoice">
+        </div>
         <br>
       <div id="checkboxToppings">
+        <div>
         <p><b>Add Toppings ($1 per topping)</b></p>
-      <div class="add-toppings">
         <input type="checkbox" id="choose-toppings" value="pineapple">
         <label for="pineapple">Pineapple</label>
-      </div>
-      <div>
+        </div>
+        <div>
         <input type="checkbox" id="choose-toppings" value="spinach">
         <label for="spinach">Spinach</label>
-      </div>
-      <div>
+        </div>
+        <div>
         <input type="checkbox" id="choose-toppings" value="olives">
         <label for="olives">Olives</label>
-      </div>
-      <div>
+        </div>
+        <div>
         <input type="checkbox" id="choose-toppings" value="peppers">
         <label for="peppers">Peppers</label>
-      </div>
-      <div>
+        </div>
+        <div>
         <input type="checkbox" id="choose-toppings" value="mushrooms">
         <label for="mushrooms">Mushrooms</label>
-      </div>
-
+        </div>
+      </div>  
       <div>
         <button class = "btn btn-dark" type="submit">Add Toppings</button>
       </div>              
-    </form>
-        
-
-
+    </form>       
  </div>
 </body>
 </html>

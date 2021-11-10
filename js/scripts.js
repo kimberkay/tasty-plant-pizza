@@ -1,25 +1,49 @@
 //Business Logic
 
-let testPizza = new Pizza("medium",["pineapple, spinach"]);
-let testPizza2= new Pizza("large",["peppers"]);
 
 function Pizza(size, toppings) {
   this.size = size;
-  this.toppings = [toppings];
-  this.price = 22;
+  this.toppings = toppings;
+  this.price = 24;
 }
 
 Pizza.prototype.pizzaCost = function() {
+  if (this.toppings === "yes") {
+    this.price +=5;
+  } 
   if (this.size === "medium") {
     this.price += 0;
   } else if (this.size === "large") {
     this.price += 5;
+    console.log(this.price)
+  } else {
+    return this.price;
   }
-  return this.price;
-};
+}
+  
 
 
 //UI Logic for radio button toppings
+$(document).ready(function() {
+  $("form#pizza-order").submit(function(event) {
+    event.preventDefault();
+    let testPizza = new Pizza("medium","yes");
+    let testPizza2= new Pizza("large","yes");
+    console.log(testPizza2.pizzaCost())
+    console.log(testPizza2)
+    console.log(testPizza)
+    
+   // function showPizzaOrder();
+    const size = $("input:radio[name=choose-size]:checked").val();
+    const toppings = $("input:radio[name=toppings]:checked").val();
+   
+    $("input#topping1").val("");
+    $("input#topping2").val("");
+    $("input#topping3").val("");
+  
+  });
+});
+
 
 
 
