@@ -1,13 +1,18 @@
 //Business Logic
 
-
-function Pizza(size, [toppings]) {
+function Pizza(size, toppings) {
   this.size = size;
-  this.toppings = [];
+  this.toppings = toppings;
   this.price = 24;
 };
 
-Pizza.prototype.pizzaCost = function() {
+
+let testPizza = new Pizza("medium",["spinach", "pineapple"]);
+console.log(testPizza)
+
+
+
+/*Pizza.prototype.pizzaCost = function() {
   if (this.size === "large") {
     this.price += 5;
   } else if (this.size === "medium") {
@@ -38,7 +43,7 @@ $(document).ready(function() {
       let topping = $(this).val();
       toppingsArray.push(topping);
       console.log(toppingsArray)
-  });
+  });*/
   
     
     

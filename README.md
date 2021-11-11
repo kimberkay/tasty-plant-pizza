@@ -22,13 +22,15 @@ _A website that will allow users to order a basic plant-based pizza and add topp
 ## Test
 
   * _Describe: Pizza ()
-    Test: It will create a Pizza constructor with properties for size and toppings
+    Test: It will create a Pizza constructor with properties for size, toppings and price
     Code: function Pizza(size, toppings){
           this.size = size;
           this.toppings = toppings;
           this.price = 22;
           }
     Expected Output: testPizza {size: 'medium', toppings: Array(1), price: 22}
+
+    Describe: Pizza.prototype.addToppings
 
     Describe: Pizza.prototype.cost ()
     Test: It will create a Pizza.prototype for the cost of pizza when size is selected
