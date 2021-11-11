@@ -2,9 +2,17 @@
   display: show;
 }
 
-.body {
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+#toppingsInput {
+  display: none;
 }
 
+#list-toppings {
+  display:none;
+}
+.pizza-toppings {
+  display:none;
+}
+
+#toppings-input {
+  display:none;
+}

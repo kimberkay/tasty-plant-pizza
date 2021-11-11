@@ -1,24 +1,23 @@
 //Business Logic
 
 
-function Pizza(size, toppings) {
+function Pizza(size, [toppings]) {
   this.size = size;
-  this.toppings = toppings;
+  this.toppings = [];
   this.price = 24;
 };
 
 Pizza.prototype.pizzaCost = function() {
   if (this.size === "large") {
     this.price += 5;
-  } else { 
-  }
-
-  if (this.toppings === "yes") {
-    this.price +=5;
-  } else {
-    }
-  return this.price;
+  } else if (this.size === "medium") {
+    this.price += 0;
+  } 
+  return this.price
 };
+  
+
+  
 
 
 
@@ -33,41 +32,15 @@ $(document).ready(function() {
     console.log(testPizza2);
     console.log(testPizza);
     console.log(testPizza3);
-    
-    let exampleToppings = $("input:checkbox[name=toppingsInput]:checked").each(function() {
+
+    const size = $("input:radio[name=choose-size]:checked").val(); 
+    let exampleToppings = $("input:checkbox[name=chooseToppings]:checked").each(function() {
       let topping = $(this).val();
       toppingsArray.push(topping);
       console.log(toppingsArray)
-      });
-   // function showPizzaOrder();
-    const size = $("input:radio[name=choose-size]:checked").val();
-    const toppings = $("input:radio[name=toppings]:checked").val();
-   
-    $("input#topping1").val("");
-    $("input#topping2").val("");
-    $("input#topping3").val("");
-  
   });
-});
-
-
-
-
-//UI Logic for figuring out checkboxes
-
-/*$(document).ready(function() {
-  $('form#language').submit(function(event) {
-    event.preventDefault();
-    
-    const size = $("input:radio[choose-size]:checked").val();
-    const toppings = $("input:checkbox[choose-toppings]:checked").val();
   
-    When I can get checked toppings into an array, I believe I would use (array.length +1) to get the additional cost for toppings @ $1 each
-  }
-  }
-  ); -*/
-
-
-
-
-
+    
+    
+    
+    
