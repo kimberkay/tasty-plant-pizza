@@ -22,25 +22,14 @@ _A website that will allow users to order a basic plant-based pizza and add topp
 ## Test
 
   * _Describe: Pizza ()
-    Test: It will create a Pizza constructor with properties for size, toppings and price
-    Code: function Pizza(size, toppings){
-          this.size = size;
-          this.toppings = toppings;
-          this.price = 22;
-          }
-    Expected Output: testPizza {size: 'medium', toppings: Array(1), price: 22}
-
-    Describe: Pizza.prototype.addToppings
-
+    Test: It should create a Pizza object with properties of size, and [toppings]
+    Code: const testPizza = new Pizza(medium, ["spinach","pineapple"]);
+    Expected Output: testPizza {size: 'medium', toppings: [spinach, pineapple], price: 24}
+   
     Describe: Pizza.prototype.cost ()
-    Test: It will create a Pizza.prototype for the cost of pizza when size is selected
-    Code: Pizza.prototype.finalPrice = function() {
-            if (this.size === "medium") {
-            this.price += 0;
-          } else if (this.size === "large") {
-            this.price += 5;
-            }
-    Expected Output: testPizza2 {size: 'large', toppings: Array(1), price: 27}
+    Test: It will create a Pizza.prototype for the cost of pizza when "size" is selected.
+    Code: const testPizza2 = new Pizza('large', toppings: ["peppers"]);
+    Expected Output: testPizza2 {size: 'large', toppings: ["peppers"], price: 29}
 
     Describe: Pizza.prototype.cost ()
     Test: It will use the Pizza.prototype to add to the cost of pizza based on toppings choice.

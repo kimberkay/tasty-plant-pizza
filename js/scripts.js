@@ -7,12 +7,11 @@ function Pizza(size, toppings) {
 };
 
 
-let testPizza = new Pizza("medium",["spinach", "pineapple"]);
-console.log(testPizza)
+Pizza.prototype.addToppings = function(veggies) {
+  this.toppings.veggieArray.push(veggies);
+};
 
-
-
-/*Pizza.prototype.pizzaCost = function() {
+Pizza.prototype.pizzaCost = function() {
   if (this.size === "large") {
     this.price += 5;
   } else if (this.size === "medium") {
@@ -20,6 +19,17 @@ console.log(testPizza)
   } 
   return this.price
 };
+
+
+
+
+
+
+
+
+
+
+
   
 
   
@@ -37,15 +47,16 @@ $(document).ready(function() {
     console.log(testPizza2);
     console.log(testPizza);
     console.log(testPizza3);
-
+    let toppingsArray = [];
     const size = $("input:radio[name=choose-size]:checked").val(); 
     let exampleToppings = $("input:checkbox[name=chooseToppings]:checked").each(function() {
       let topping = $(this).val();
       toppingsArray.push(topping);
-      console.log(toppingsArray)
-  });*/
+      console.log('here i am')
+      console.log([toppingsArray])
+  });
   
     
     
     
-    
+});})*/
