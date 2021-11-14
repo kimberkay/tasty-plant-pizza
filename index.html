@@ -34,68 +34,38 @@
           </label>
         </div> 
         <br>
-        <div class="pizza-toppings">
-          <label>
-            <input type="radio" name="toppings" value="yes" checked>
-            Yes Please!
-          </label>
+        <div id="checkboxToppings">
+          <p><b>Add Toppings ($1 per topping)</b></p>
+            <input type="checkbox" name="chooseToppings" value="pineapple">
+            <label for="pineapple">Pineapple</label>
         </div>
-        <div class="pizza-toppings">
-          <label>
-            <input type="radio" name="toppings" value="no-thanks">
-            No Thanks, just cheese for me!
-          </label>
-        </div> 
-        <div id="list-toppings">
-          <br>
-          <p><b>Make your choice from these options:</b></p>
-            <ul>
-              <li>Olives</li>
-              <li>Pineapple</li>
-              <li>Spinach</li>
-              <li>Mushrooms</li>
-              <li>Peppers</li>
-              <li>Vegan Pepperoni</li>
-            </ul>
+        <div>
+          <input type="checkbox" name="chooseToppings" value="spinach">
+          <label for="spinach">Spinach</label>
         </div>
-        <div id="toppings-input">
-          <label for="topping1">Choose One Topping:</label>
-          <input type="text" id="firstChoice">
-          <label for="topping2">Choose Another One:</label>
-          <input type="text" id="secondChoice">
-          <label for="topping3">Choose A Third:</label>
-          <input type="text" id="thirdChoice">
+        <div>
+          <input type="checkbox" name="chooseToppings" value="olives">
+          <label for="olives">Olives</label>
+        </div>
+        <div>
+          <input type="checkbox"  name="chooseToppings" value="peppers">
+          <label for="peppers">Peppers</label>
+        </div>
+        <div>
+          <input type="checkbox" name="chooseToppings" value="mushrooms">
+          <label for="mushrooms">Mushrooms</label>
         </div>
         <br>
-      <div id="checkboxToppings">
         <div>
-        <p><b>Add Toppings ($1 per topping)</b></p>
-        <input type="checkbox" name="chooseToppings" value="pineapple">
-        <label for="pineapple">Pineapple</label>
-        </div>
-        <div>
-        <input type="checkbox" name="chooseToppings" value="spinach">
-        <label for="spinach">Spinach</label>
-        </div>
-        <div>
-        <input type="checkbox" name="chooseToppings" value="olives">
-        <label for="olives">Olives</label>
-        </div>
-        <div>
-        <input type="checkbox"  name="chooseToppings" value="peppers">
-        <label for="peppers">Peppers</label>
-        </div>
-        <div>
-        <input type="checkbox" name="chooseToppings" value="mushrooms">
-        <label for="mushrooms">Mushrooms</label>
-        </div>
-      </div> 
-      <br>
-      <br> 
-      <div>
         <button class = "btn btn-dark" type="submit">Make Me A Pizza!</button>
-      </div>              
-    </form>       
+        </div>              
+    </form>
+    <div id="show-pizza">
+      <br>
+      <p><b>Your Tasty Plant Pizza is coming right up.</b></p>
+      <p>You ordered: A <strong><span class="pizza-size"></span> with <span class="pizza-toppings"></span></strong></p>
+      <p>Your total cost is: <strong> $<span class ="pizza-cost"></span></strong></p>
+    </div>       
  </div>
 </body>
 </html>

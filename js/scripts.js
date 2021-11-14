@@ -21,21 +21,22 @@ PizzaOrder.prototype.pizzaCost = function() {
 };
 
 
-
+function attachPizzaOrderListeners() {
+  $
+}
     
 $(document).ready(function() {
+  attachPizzaOrderListeners();
   $("form#pizza-order").submit(function(event) {
     event.preventDefault();
-
-    const size = $("input:radio[name=prefer1]:checked").val();
+    const pizzaSize = $('input:radio[name="choose-size"]:checked').val();
     let toppings = [];
     $('input[name="chooseToppings"]:checked').each(function() {
         toppings.push(this.value);
+     let newPizzaOrder = new PizzaOrder(pizzaSize, toppings);  
+     PizzaOrder.addToppings(newPizzaOrder)
+     PizzaOrder.pizzaCost(newPizzaOrder) 
     });
-
-    let myPizza = new PizzaOrder (size, [toppings]);
-    let price = PizzaOrder.pizzaCost();
-    console.log(myPizza);
 
 
 

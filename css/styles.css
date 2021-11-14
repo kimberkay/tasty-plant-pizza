@@ -16,3 +16,7 @@
 #toppings-input {
   display:none;
 }
+
+#show-pizza {
+  display: none;
+}
