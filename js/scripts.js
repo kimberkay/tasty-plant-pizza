@@ -1,62 +1,53 @@
 //Business Logic
-
-function Pizza(size, toppings) {
+function PizzaOrder(size, toppings) {
   this.size = size;
   this.toppings = toppings;
-  this.price = 24;
+}
+
+PizzaOrder.prototype.addToppings = function() {
+  let toppingsCost = this.toppings.length * 1.25;
+  return toppingsCost;
+}
+
+PizzaOrder.prototype.pizzaCost = function() {
+  let baseCost = 0;
+  if (this.size === "medium") {
+    baseCost = 24;
+  } else if (this.size === "large") {
+    baseCost = 29;
+  } else {
+  }
+  return baseCost + this.addToppings();
 };
 
 
-Pizza.prototype.addToppings = function(veggies) {
-  this.toppings.veggieArray.push(veggies);
-};
 
-Pizza.prototype.pizzaCost = function() {
-  if (this.size === "large") {
-    this.price += 5;
-  } else if (this.size === "medium") {
-    this.price += 0;
-  } 
-  return this.price
-};
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-
-
-//UI Logic for radio button toppings
+    
 $(document).ready(function() {
   $("form#pizza-order").submit(function(event) {
     event.preventDefault();
-    let testPizza = new Pizza("medium","yes");
-    let testPizza2 = new Pizza("large","yes");
-    let testPizza3 = new Pizza("large","no");
-    console.log(testPizza.pizzaCost());
-    console.log(testPizza2);
-    console.log(testPizza);
-    console.log(testPizza3);
-    let toppingsArray = [];
-    const size = $("input:radio[name=choose-size]:checked").val(); 
-    let exampleToppings = $("input:checkbox[name=chooseToppings]:checked").each(function() {
-      let topping = $(this).val();
-      toppingsArray.push(topping);
-      console.log('here i am')
-      console.log([toppingsArray])
-  });
+
+    const size = $("input:radio[name=prefer1]:checked").val();
+    let toppings = [];
+    $('input[name="chooseToppings"]:checked').each(function() {
+        toppings.push(this.value);
+    });
+
+    let myPizza = new PizzaOrder (size, [toppings]);
+    let price = PizzaOrder.pizzaCost();
+    console.log(myPizza);
+
+
+
+    
+    
   
-    
-    
-    
-});})*/
+  });
+});
+
+
+
+
+   
+
+   
