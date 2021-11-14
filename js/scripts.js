@@ -34,6 +34,9 @@ $(document).ready(function() {
      let newPizzaOrder = new PizzaOrder(pizzaSize, toppingsChoice);
 
      
+        $("show-pizza").show(newPizzaOrder);
+        $(".pizza-cost").html(PizzaOrder.pizzaCost);
+      
 
 
      
