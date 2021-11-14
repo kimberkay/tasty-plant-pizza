@@ -25,6 +25,7 @@ PizzaOrder.prototype.pizzaCost = function() {
 
     
 $(document).ready(function() {
+  
   $("form#pizza-order").submit(function(event) {
     event.preventDefault();
     const pizzaSize = $('input:radio[name="choose-size"]:checked').val();
@@ -33,15 +34,12 @@ $(document).ready(function() {
         toppingsChoice.push(this.value);
      let newPizzaOrder = new PizzaOrder(pizzaSize, toppingsChoice);
 
-     
-        $("show-pizza").show(newPizzaOrder);
+       function display(){
+        $("#show-pizza)").show();
+        $("pizza-size").html(newPizzaOrder);
         $(".pizza-cost").html(PizzaOrder.pizzaCost);
-      
-
-
-     
-  
-    console.log(newPizzaOrder);
+       };
+      console.log(newPizzaOrder);
     
     });
     
