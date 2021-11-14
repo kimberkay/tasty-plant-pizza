@@ -21,21 +21,29 @@ _A website that will allow users to order a basic plant-based pizza and add topp
 
 ## Test
 
-  * _Describe: Pizza ()
-    Test: It should create a Pizza object with properties of size, and [toppings]
-    Code: const testPizza = new Pizza(medium, ["spinach","pineapple"]);
-    Expected Output: testPizza {size: 'medium', toppings: [spinach, pineapple], price: 24}
-   
-    Describe: Pizza.prototype.cost ()
-    Test: It will create a Pizza.prototype for the cost of pizza when "size" is selected.
-    Code: const testPizza2 = new Pizza('large', toppings: ["peppers"]);
-    Expected Output: testPizza2 {size: 'large', toppings: ["peppers"], price: 29}
+  * describe PizzaOrder
 
-    Describe: Pizza.prototype.cost ()
-    Test: It will use the Pizza.prototype to add to the cost of pizza based on toppings choice.
-    Code: 
-          
+  test('should correctly create a  object with size and toppings') 
+    const myPizza = new PizzaOrder("large", ["mushroom","olives"]);
+    expect(myPizza.size).toEqual("large");
+    expect(myPizza.toppings).toEqual(["mushroom","olives"]); 
+  
 
+
+  test('should correctly return the updated cost')
+    const myPizza = new PizzaOrder("large", ["mushroom","olives"]);
+    expect(myPizza.pizzaCost()).toEqual(31.50);
+  
+
+  test('should correctly return toppings cost')
+    const myPizza = new PizzaOrder("large", ["mushroom","olives"]);
+    expect(myPizza.addToppings()).toEqual(2.50);
+  
+
+  test('should correctly return total pizza cost')
+    const myPizza = new PizzaOrder("large", ["mushroom","olives"]);
+    expect(myPizza.pizzaCost()).toEqual(31.50);
+ 
 
 ## Setup/Installation Requirements
 
@@ -50,7 +58,7 @@ _A website that will allow users to order a basic plant-based pizza and add topp
 
 ## Known Bugs
 
-* _Too many bugs_
+* UI isn't connected to back end logic
 
 ## License
 
