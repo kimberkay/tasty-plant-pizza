@@ -5,9 +5,9 @@ function PizzaOrder(size, toppings) {
 }
 
 PizzaOrder.prototype.addToppings = function() {
-  let toppingsCost = this.toppings.length * 1.25;
+  let toppingsCost = (this.toppings.length * 1.25);
   return toppingsCost;
-}
+};
 
 PizzaOrder.prototype.pizzaCost = function() {
   let baseCost = 0;
@@ -20,29 +20,28 @@ PizzaOrder.prototype.pizzaCost = function() {
   return baseCost + this.addToppings();
 };
 
+//UI Logic
 
-function attachPizzaOrderListeners() {
-  $
-}
+
     
 $(document).ready(function() {
-  attachPizzaOrderListeners();
   $("form#pizza-order").submit(function(event) {
     event.preventDefault();
     const pizzaSize = $('input:radio[name="choose-size"]:checked').val();
-    let toppings = [];
+    let toppingsChoice = [];
     $('input[name="chooseToppings"]:checked').each(function() {
-        toppings.push(this.value);
-     let newPizzaOrder = new PizzaOrder(pizzaSize, toppings);  
-     PizzaOrder.addToppings(newPizzaOrder)
-     PizzaOrder.pizzaCost(newPizzaOrder) 
-    });
+        toppingsChoice.push(this.value);
+     let newPizzaOrder = new PizzaOrder(pizzaSize, toppingsChoice);
+
+     
 
 
-
-    
-    
+     
   
+    console.log(newPizzaOrder);
+    
+    });
+    
   });
 });
 
