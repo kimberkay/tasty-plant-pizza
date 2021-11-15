@@ -51,18 +51,18 @@ _A website that will allow users to order a basic plant-based pizza and add topp
 * _Click on the green "Code" button and copy the repository URL or click on the copy button_
 * _Open the terminal on your desktop_
 * _Once in the terminal, use it to navigate to your desktop folder_
-* _Once inside your desktop folder, use the command "git clone https://github.com/kimberkay/tasty-plant-pizza.com"_
+* _Once inside your desktop folder, use the command "git clone https://    github.com/kimberkay/tasty-plant-pizza.com"_
 * _Open the project with the code editor of your choice_
 
 
 
 ## Known Bugs
 
-* UI isn't connected to back end logic
+*_Pizza Order still needs to be displayed, cost is there now.
 
 ## License
 
 _MIT License: https://opensource.org/licenses/MIT_
 
-Copyright (c) _2021_  Kim Brannian 
+Copyright (c) _11/05/2021_  Kim Brannian 
 _

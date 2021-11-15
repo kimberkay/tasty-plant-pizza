@@ -1,3 +1,12 @@
+.body {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid #294404;
+  text-align: center;
+}
+
+
 #checkboxToppings {
   display: show;
 }
@@ -17,6 +26,6 @@
   display:none;
 }
 
-#show-pizza {
+#show-total {
   display: none;
 }
